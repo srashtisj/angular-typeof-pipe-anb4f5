@@ -1,0 +1,26 @@
+
+<button (click)="someStuff1()">Click me 1</button>
+&nbsp;
+<button (click)="someStuff2()">Click me 2</button>
+
+<p> Open console to compare console.log() count. </p>
+
+<h3>
+  Example with function call 
+</h3>
+<ul>
+<li *ngFor="let item of list" [class.red]="getType(item) === 'number'">
+ <b>{{ item }} </b> type = {{ getType(item) }}
+
+   </li>
+</ul>
+
+<h3>
+  Example with pipe 
+</h3>
+<ul>
+<li *ngFor="let item of list" [class.red]="(item | typeof) === 'number'">
+<b> {{ item }} </b> type = {{ item | typeof }}
+  </li>
+</ul>
+
